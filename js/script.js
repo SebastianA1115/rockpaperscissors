@@ -24,7 +24,7 @@ $(".play").click(function() {
     if (randomNumber === 1) {
      computerChoice = "rock";
   } else if (randomNumber === 2) {
-    computerChoice = "scissor";
+    computerChoice = "scissors";
   } else if (randomNumber === 3) {
     computerChoice = "paper";
   } 
@@ -33,18 +33,22 @@ $(".play").click(function() {
   //condition for rules
    if (userChoiceNum === randomNumber) {
     $(".result").text('Draw');
-  } else if (userInput === "scissor" && computerChoice === "paper") {
-  $(".result").text('User Wins');
-  }else if (userInput === "rock" &&computerChoice === "scissor") {
-    $(".result").text('User Wins');
+  } else if (userInput === "scissors" && computerChoice === "paper") {
+  $(".result").text('You Wins');
+  }else if (userInput === "rock" &&computerChoice === "scissors") {
+    $(".result").text('You Wins');
   } else if (userInput === "paper" && computerChoice === "rock") {
-    $(".result").text('User Wins');
-  }else if (userInput === "scissor" && computerChoice === "rock") {
-    $(".result").text('Computer Wins');
+    $(".result").text('You Wins');
+  }else if (userInput === "scissors" && computerChoice === "rock") {
+    $(".result").text('You Loose');
   }else if (userInput === "rock" && computerChoice === "paper") {
-    $(".result").text('Computer Wins');
-  } else if (userInput === "paper" &&computerChoice === "scissor") {
-    $(".result").text('Computer Wins');
+    $(".result").text('You Loose');
+  } else if (userInput === "paper" &&computerChoice === "scissors") {
+    $(".result").text('You Loose');
+  }else{
+    $(".result").text('Follow the RULES!!!!!');
+    $(".computerChoice").text("");
+    $(".userChoice").text("");
   }
   
   
